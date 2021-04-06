@@ -1,0 +1,33 @@
+server:
+  port: 9080
+  servlet:
+    context-path: /globalmoney-payments
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+
+#Actuator Configuration
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  app:
+    name: ${name}
+    version: ${version}
+    description: ${description}
+
+payments:
+  account:
+    min-transfer-amount: 100
