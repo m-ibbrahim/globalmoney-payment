@@ -10,7 +10,11 @@ spring:
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-
+  security:
+    app-secret: abcd@!234
+    user:
+      name: admin
+      password: admin
 #Actuator Configuration
 
 management:
